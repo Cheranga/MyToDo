@@ -1,29 +1,31 @@
 ﻿using MyToDo.DataAccess.Cosmos;
+using MyToDo.Functions.Dto.Requests;
+using MyToDo.Functions.Dto.Responses;
 
 namespace MyToDo.Functions.TableStorage
 {
     public static class TableStorageExtensions
     {
-        public static ToDoTableEntity ToTableEntity(this ToDo todo)
+        public static ToDoTableEntity ToTableEntity(this CreateToDoRequest request)
         {
             return new ToDoTableEntity
             {
-                RowKey = todo.Id,
+                RowKey = request.Id,
                 PartitionKey = "TODO",
-                TaskDescription = todo.TaskDescription,
-                IsCompleted = todo.IsCompleted,
-                CreatedTime = todo.CreatedTime
+                TaskDescription = request.TaskDescription,
+                IsCompleted = request.IsCompleted,
+                CreatedTime = request.CreatedTime
             };
         }
 
-        public static ToDo ToToDo(this ToDoTableEntity tableEntity)
+        public static DisplayTodoResponse ToDisplay(this ToDoTableEntity tableEntity)
         {
-            return new ToDo
+            return new DisplayTodoResponse
             {
                 Id = tableEntity.RowKey,
-                TaskDescription = tableEntity.TaskDescription,
+                CreatedTime = tableEntity.CreatedTime,
                 IsCompleted = tableEntity.IsCompleted,
-                CreatedTime = tableEntity.CreatedTime
+                TaskDescription = tableEntity.TaskDescription
             };
         }
     }

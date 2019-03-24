@@ -28,7 +28,7 @@ namespace MyToDo.Functions.TableStorage
                 return new NotFoundObjectResult("There are no todos");
             }
 
-            return new OkObjectResult(segment.Select(x=>x.ToToDo()));
+            return new OkObjectResult(segment.Select(x=>x.ToDisplay()));
         }
     }
 }

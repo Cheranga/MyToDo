@@ -6,6 +6,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using MyToDo.DataAccess.Cosmos;
+using MyToDo.Functions.Dto.Requests;
 using Newtonsoft.Json;
 
 namespace MyToDo.Functions.TableStorage
@@ -20,7 +21,7 @@ namespace MyToDo.Functions.TableStorage
         {
             log.LogInformation("TableStorage - Creating todo");
 
-            var todo = JsonConvert.DeserializeObject<ToDo>(await new StreamReader(request.Body).ReadToEndAsync());
+            var todo = JsonConvert.DeserializeObject<CreateToDoRequest>(await new StreamReader(request.Body).ReadToEndAsync());
             if (todo == null)
             {
                 return new BadRequestObjectResult("Invalid request");

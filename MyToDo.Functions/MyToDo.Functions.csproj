@@ -8,6 +8,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyToDo.DataAccess.Cosmos\MyToDo.DataAccess.Cosmos.csproj" />
+    <ProjectReference Include="..\MyToDo.Functions.Dto\MyToDo.Functions.Dto.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
