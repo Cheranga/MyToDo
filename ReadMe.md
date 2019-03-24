@@ -42,3 +42,10 @@ To resolve that stop the function in Azure portal, publish the changes and, then
 ## CI/CD
 - [ ] Enable CI/CD in the build and release pipelines.
 - [ ] Do a code change and commit the code and, test whether the CI/CD works fine. This should be done after the CD step is completed.
+
+## Refactor
+- [ ] Add dependency injection through `AzureFunctions.Autofac`
+- [ ] Move the configurations to AKV. Need to consider about the local and production environments.
+  * https://stackoverflow.com/questions/49062150/using-azure-functions-with-a-different-storage-account-depending-on-environment
+- [ ] Add another layer as a mediator which handles the application business logic.
+- [ ] Add JWT Authentication
