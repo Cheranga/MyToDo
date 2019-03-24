@@ -22,6 +22,9 @@
 - [x] Deploy the solution using VS publish option to this function and test it's functionality.
 - [x] Test the deployed functions in Azure using postman.
 
+**_When you try to publish changes on top of a function app which is already up and running you might get an error in VS.
+To resolve that stop the function in Azure portal, publish the changes and, then start the function app in the portal._**
+
 ### Cosmos
 
 - [ ] Cosmos database related implementations.
