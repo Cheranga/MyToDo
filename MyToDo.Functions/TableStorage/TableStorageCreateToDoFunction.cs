@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
-using MyToDo.DataAccess.Cosmos;
+using MyToDo.DataAccess.TableStorage;
 using MyToDo.Functions.Dto.Requests;
 using Newtonsoft.Json;
 

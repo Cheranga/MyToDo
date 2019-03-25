@@ -4,10 +4,14 @@
     <AzureFunctionsVersion>v2</AzureFunctionsVersion>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.KeyVault" Version="3.0.3" />
+    <PackageReference Include="Microsoft.Azure.Services.AppAuthentication" Version="1.0.3" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="3.0.4" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.24" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyToDo.DataAccess.Cosmos\MyToDo.DataAccess.Cosmos.csproj" />
+    <ProjectReference Include="..\MyToDo.DataAccess.TableStorage\MyToDo.DataAccess.TableStorage.csproj" />
     <ProjectReference Include="..\MyToDo.Functions.Dto\MyToDo.Functions.Dto.csproj" />
   </ItemGroup>
   <ItemGroup>

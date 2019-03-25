@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Microsoft.WindowsAzure.Storage.Table;
 
-namespace MyToDo.DataAccess.Cosmos
+namespace MyToDo.DataAccess.TableStorage
 {
     public class ToDoTableEntity : TableEntity
     {

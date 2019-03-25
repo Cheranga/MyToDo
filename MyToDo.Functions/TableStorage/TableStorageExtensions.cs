@@ -1,4 +1,4 @@
-﻿using MyToDo.DataAccess.Cosmos;
+﻿using MyToDo.DataAccess.TableStorage;
 using MyToDo.Functions.Dto.Requests;
 using MyToDo.Functions.Dto.Responses;
 
